@@ -1,0 +1,42 @@
+{
+  "name": "LM Assistant",
+  "description": "Highlight any text on a webpage and ask an AI-powered language model for insights, explanations, or answers.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "lm-assistant@andymememe.com"
+    }
+  },
+  "version": "0.0.4",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "sidebar_action": {
+    "default_title": "LM Assistant",
+    "default_panel": "sidebar/sidebar.html",
+    "default_icon": {
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    },
+    "open_at_install": false
+  },
+  "options_ui": {
+    "page": "options/option.html"
+  },
+  "action": {
+    "default_title": "LM Assistant",
+    "default_icon": {
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": ["storage", "tabs", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>", "*://*/*"],
+  "manifest_version": 3
+}

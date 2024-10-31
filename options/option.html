@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LM Assistant</title>
+  <style>
+  /* Add some styles to the form */
+    .form-group {
+      margin-bottom: 10px;
+    }
+    label {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      border: 1px solid #ddd;
+    }
+    .btn-primary {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <div class="form">
+    <div class="form-group">
+      <label for="apiEndpoint">API Endpoint</label>
+      <input type="text" class="form-control" id="apiEndpoint" placeholder="https://example.com/chat/completions">
+    </div>
+    <div class="form-group">
+      <label for="apiKey">API Key</label>
+      <input type="password" class="form-control" id="apiKey" placeholder="abc1234567890">
+    </div>
+    <div class="form-group">
+      <label for="model">Model</label>
+      <input type="text" class="form-control" id="model" placeholder="gpt4-o">
+    </div>
+    <button id="submit" class="btn btn-primary">Submit</button>
+  </div>
+  <script src="option.js"></script>
+</body>
+</html>
