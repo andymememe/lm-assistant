@@ -26,24 +26,25 @@ document.getElementById("define").addEventListener('click', function() {
     });
 });
 
-document.getElementById("accept").addEventListener('click', function() {
+document.getElementById("translate").addEventListener('click', function() {
     response.textContent = "Thinking...";
     getHightlighted()
     .then(text => {
-        queryGPT("\u8acb\u5e6b\u6211\u63a5\u53d7\u4ee5\u4e0b\u9019\u5c01\u96fb\u5b50\u90f5\u4ef6\u9080\u8acb:\n" + text)
-            .then(text => {
-                response.textContent = text;
-            }, error => {
-                response.textContent = error;
-            });
+        queryGPT("\u8acb\u5c07\u4ee5\u4e0b\u6587\u5b57\u7ffb\u8b6f\u6210\u4e2d\u6587\uff0c\u4e0d\u8981\u505a\u4efb\u4f55\u8d85\u8b6f\u548c\u89e3\u91cb:\n" + text)
+        .then(text => {
+            response.textContent = text;
+        }, error => {
+            response.textContent = error;
+        });
     });
 });
 
-document.getElementById("reject").addEventListener('click', function() {
+document.getElementById("ask").addEventListener('click', function() {
     response.textContent = "Thinking...";
     getHightlighted()
     .then(text => {
-        queryGPT("\u8acb\u5e6b\u6211\u62d2\u7d55\u4ee5\u4e0b\u9019\u5c01\u96fb\u5b50\u90f5\u4ef6\u9080\u8acb:\n" + text)
+        let quest = document.getElementById('question').value;
+        queryGPT(quest + "\uff0c\u8acb\u53c3\u8003\u4ee5\u4e0b\u6587\u5b57\u505a\u56de\u61c9\uff0c\u4e0d\u8981\u7528\u5176\u4ed6\u8cc7\u6599\u4f86\u505a\u53c3\u8003:\n" + text)
         .then(text => {
             response.textContent = text;
         }, error => {

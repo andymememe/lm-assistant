@@ -17,8 +17,15 @@
       opacity: 0.7;
     }
 
+    #question {
+      width: 80%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
     .responsive-pre {
-      width: 100%;
+      width: 80%;
       /* 自動調整寬度 */
       max-width: 500px;
       /* 最大寬度限制 */
@@ -37,8 +44,10 @@
 <body>
   <button id="summary">Summary</button>
   <button id="define">Define</button>
-  <button id="accept">Accept</button>
-  <button id="reject">Reject</button>
+  <button id="translate">Translate</button>
+  <button id="ask">Ask</button>
+  <br>
+  <input type="text" id="question" placeholder="Ask a question...">
   <br>
   <pre class="responsive-pre" id="response"></pre>
   <script src="sidebar.js"></script>
