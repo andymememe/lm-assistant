@@ -6,7 +6,7 @@
       "id": "lm-assistant@andymememe.com"
     }
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
   "background": {
     "scripts": ["background.js"]
   },
